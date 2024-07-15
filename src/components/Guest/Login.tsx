@@ -1,21 +1,22 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import './guest.css';
 
 const Login = () => {
     const [login, setLogin] = useState('');
     const [password, setPassword] = useState('');
-    
+
     const handleClickLogin = () => {
         //TODO Login
-        alert('login')
+        alert('login');
     }
 
     const handleClickClear = () => {
         setLogin('');
         setPassword('');
-
     }
+
     return (
-        <>
+        <div className="modal-body">
             <label>Login:
                 <input
                     onChange={e => setLogin(e.target.value.trim())}
@@ -30,11 +31,12 @@ const Login = () => {
                     value={password}
                 />
             </label>
-            <button onClick={handleClickLogin}>Login</button>
-            <button onClick={handleClickClear}>Clear</button>
-
-        </>
+            <div className="modal-footer">
+                <button className="save-button" onClick={handleClickLogin}>Login</button>
+                <button className="clear-button" onClick={handleClickClear}>Clear</button>
+            </div>
+        </div>
     )
 }
 
-export default Login
+export default Login;

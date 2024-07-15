@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import './guest.css';
 
 const Register = () => {
     const [login, setLogin] = useState('');
@@ -8,7 +9,7 @@ const Register = () => {
 
     const handleClickRegister = () => {
         //TODO Register
-        alert('register')
+        alert('register');
     }
 
     const handleClickClear = () => {
@@ -19,7 +20,7 @@ const Register = () => {
     }
 
     return (
-        <>
+        <div className="modal-body">
             <label>Login:
                 <input
                     onChange={e => setLogin(e.target.value.trim())}
@@ -48,10 +49,12 @@ const Register = () => {
                     value={lastName}
                 />
             </label>
-            <button onClick={handleClickRegister}>Register</button>
-            <button onClick={handleClickClear}>Clear</button>
-        </>
+            <div className="modal-footer">
+                <button className="save-button" onClick={handleClickRegister}>Register</button>
+                <button className="clear-button" onClick={handleClickClear}>Clear</button>
+            </div>
+        </div>
     )
 }
 
-export default Register
+export default Register;

@@ -1,13 +1,14 @@
 import React from 'react';
 import './App.css';
+import './styles/styles.css';
 import Guest from './components/Guest';
-import Home from './components/Home';
+import Header from './components/Header';
 
 function App() {
   return (
     <div className="App">
       {/* <Guest /> */}
-      <Home />
+      <Header />
     </div>
   );
 }
