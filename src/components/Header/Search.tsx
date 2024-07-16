@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import searchIcon from '../../assets/icons/search-icon.svg';
 
 const Search = () => {
     const [query, setQuery] = useState('');
@@ -12,15 +13,15 @@ const Search = () => {
 
     return (
         <div className="search-bar">
-            <img src="search-icon.svg" alt="Search Icon" className="search-icon" />
             <input
                 type='text'
                 value={query}
-                onChange={e => setQuery(e.target.value.trim())}
+                onChange={e => setQuery(e.target.value)}
                 onKeyDown={handleKeyDown}
                 placeholder='Search'
                 className="search-input"
             />
+            <img src={searchIcon} alt="Search Icon" className="search-icon" />
         </div>
 
     );
