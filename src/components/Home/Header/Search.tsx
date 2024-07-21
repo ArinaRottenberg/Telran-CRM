@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import searchIcon from '../../assets/icons/search-icon.svg';
+import searchIcon from '../../../assets/icons/search-icon.svg';
 
 const Search = () => {
     const [query, setQuery] = useState('');

@@ -1,6 +1,6 @@
 import React from 'react'
 import Search from './Search'
-import logo from '../../assets/icons/logo.svg';
+import logo from '../../../assets/icons/logo.svg';
 
 const Header = () => {
   return (
