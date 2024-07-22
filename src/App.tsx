@@ -9,10 +9,12 @@ import { useAppSelector } from './app/hooks';
 function App() {
   const token = useAppSelector(state => state.token)
   return (
-    <Routes>
-      <Route path='/' element={ token ? <Navigate to={'/home'} /> : <Guest /> }/>
-      <Route path='/home' element={ token ? <Home /> : <Navigate to={'/'} />} />
-    </Routes>
+    <div>
+      <Routes>
+        <Route path='/' element={token ? <Navigate to={'/home'} /> : <Guest />} />
+        <Route path='/home' element={token ? <Home /> : <Navigate to={'/'} />} />
+      </Routes>
+    </div>
   );
 }
 

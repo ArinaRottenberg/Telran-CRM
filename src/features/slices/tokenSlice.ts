@@ -9,5 +9,5 @@ const tokenSlice = createSlice({
     }
 })
 
-export const{putToken, deleteToken} = tokenSlice.actions;
+export const { putToken, deleteToken } = tokenSlice.actions;
 export default tokenSlice.reducer;

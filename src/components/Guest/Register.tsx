@@ -26,7 +26,6 @@ const Register = () => {
         }));
     }
 
-
     const handleClickClear = () => {
         setLogin('');
         setPassword('');
