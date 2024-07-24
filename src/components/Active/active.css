@@ -1,0 +1,71 @@
+.contact-list {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact-item {
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+  }
+  
+  .contact-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact-name {
+    font-weight: bold;
+  }
+  
+  .contact-details {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .contact-status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .status-dropdown {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  
+  .contact-reminder {
+    font-size: 0.9em;
+    color: #888;
+  }
+  
+  .contact-details-expanded {
+    padding: 10px 0;
+  }
+  
+  .lead-status,
+  .activity-log,
+  .add-comment {
+    margin-bottom: 10px;
+  }
+  
+  .activity-log ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .add-comment input {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+    margin-right: 5px;
+  }
+  

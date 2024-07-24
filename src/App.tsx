@@ -2,16 +2,23 @@ import React from 'react';
 import './App.css';
 import './assets/styles/styles.css';
 import Guest from './components/Guest';
-import Header from './components/Header';
-import Sidebar from './components/Sidebar';
+import Header from './layouts/Header';
+import Sidebar from './layouts/Sidebar';
+import Active from './components/Active';
+import MainContent from './layouts/MainContent';
+import { BrowserRouter } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      {/* <Guest /> */}
-      <Header />
+    <BrowserRouter>
+    <div className="app-container">
+    <Header />
+    <div className="main-content">
       <Sidebar />
+      <MainContent />
     </div>
+  </div>
+  </BrowserRouter>
   );
 }
 
