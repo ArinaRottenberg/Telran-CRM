@@ -1,13 +1,18 @@
 import React, { useState } from 'react';
 import './guest.css';
+import { useDispatch } from 'react-redux';
+import { createToken } from '../../utils/constants';
+import { fetchUser } from '../../features/api/accountActions';
+import { AppDispatch } from '../../app/store';
+
 
 const Login = () => {
     const [login, setLogin] = useState('');
     const [password, setPassword] = useState('');
+    const dispatch = useDispatch<AppDispatch>();
 
     const handleClickLogin = () => {
-        //TODO Login
-        alert('login');
+        dispatch(fetchUser(createToken(login, password)));
     }
 
     const handleClickClear = () => {

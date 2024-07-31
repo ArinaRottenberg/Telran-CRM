@@ -1,15 +1,29 @@
 import React, { useState } from 'react';
 import './guest.css';
+import { useDispatch } from 'react-redux';
+import { registerUser } from '../../features/api/accountActions';
+import { AppDispatch } from '../../app/store';
+
 
 const Register = () => {
     const [login, setLogin] = useState('');
     const [password, setPassword] = useState('');
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
+    const [number, setNumber] = useState('');
+    const [email, setEmail] = useState('');
+
+    const dispatch = useDispatch<AppDispatch>();
 
     const handleClickRegister = () => {
-        //TODO Register
-        alert('register');
+        dispatch(registerUser({
+            login,
+            password,
+            firstName,
+            lastName,
+            number,
+            email
+        }));
     }
 
     const handleClickClear = () => {
@@ -17,6 +31,8 @@ const Register = () => {
         setPassword('');
         setFirstName('');
         setLastName('');
+        setNumber('');
+        setEmail('');
     }
 
     return (
@@ -47,6 +63,20 @@ const Register = () => {
                     onChange={e => setLastName(e.target.value.trim())}
                     type='text'
                     value={lastName}
+                />
+            </label>
+            <label>Phone number:
+                <input
+                    onChange={e => setNumber(e.target.value.trim())}
+                    type='text'
+                    value={number}
+                />
+            </label>
+            <label>Email:
+                <input
+                    onChange={e => setEmail(e.target.value.trim())}
+                    type='text'
+                    value={email}
                 />
             </label>
             <div className="modal-footer">
